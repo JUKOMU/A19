@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Register implements Servlet {
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-
+        System.out.println("0987");
     }
 
     @Override
@@ -28,6 +28,6 @@ public class Register implements Servlet {
 
     @Override
     public void destroy() {
-
+        System.out.println("0987");
     }
 }
