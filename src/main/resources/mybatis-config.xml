@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="com.csu.a19.user"/>
+        <package name="csu.a19.user"/>
     </typeAliases>
 
     <environments default="development">
@@ -12,13 +12,13 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql:///db1?useSSL=false&amp;useServerPrepStmts=true"/>
+                <property name="url" value="jdbc:mysql:///a19?useSSL=false&amp;useServerPrepStmts=true"/>
                 <property name="username" value="root"/>
-                <property name="password" value="1234"/>
+                <property name="password" value="123"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <package name="com.csu.a19.mapper"/>
+        <package name="csu.a19.mapper"/>
     </mappers>
 </configuration>

@@ -47,6 +47,7 @@ public class LoginServlet extends HttpServlet {
         if(user != null){
             // 登陆成功
             writer.write("登陆成功");
+            response.sendRedirect("index.html");
         }else {
             // 登陆失败
             writer.write("登陆失败");
