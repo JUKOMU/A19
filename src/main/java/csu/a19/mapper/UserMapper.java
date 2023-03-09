@@ -27,9 +27,17 @@ public interface UserMapper {
     User selectByUsername(String username);
 
     /**
+     * 专门用于用户信息页面的查询
+     * @param username
+     * @return
+     */
+    @Select("select * from tb_user where username = #{username}")
+    User getUser(String username);
+
+    /**
      * 添加用户
      * @param user
      */
-    @Insert("insert into tb_user values(null,#{username},#{password})")
+    @Insert("insert into tb_user values(null,#{username},#{password},#{head},#{access},#{age},#{gender},#{mail},#{TEL})")
     void add(User user);
 }
