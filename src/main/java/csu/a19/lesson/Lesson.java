@@ -4,6 +4,8 @@ public class Lesson {
     private Integer id;
     private String classname;
     private String teacher;
+    private String CRY; // "CRY" 是 "content" 的缩写
+    private String[] pictures;
 
     public Integer getId() { return id; }
 
@@ -16,6 +18,10 @@ public class Lesson {
     public String getTeacher() { return teacher; }
 
     public void setTeacher(String teacher) { this.teacher = teacher;}
+
+    public String getCRY() { return CRY; }
+
+    public void setCRY(String CRY) { this.CRY = CRY; }
 
     @Override
     public String toString(){
