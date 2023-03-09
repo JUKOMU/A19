@@ -28,9 +28,6 @@ public class RegisterServlet extends HttpServlet {
 
         //2. 调用mapper 根据用户名查询用户对象
         //2.1 获取SqlSessionFactory对象
-       /* String resource = "mybatis-config.xml";
-        InputStream inputStream = Resources.getResourceAsStream(resource);
-        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);*/
         SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
         //2.2 获取SqlSession对象
@@ -50,6 +47,8 @@ public class RegisterServlet extends HttpServlet {
             sqlSession.commit();
             // 释放资源
             sqlSession.close();
+
+            response.sendRedirect("index.html");
         }else {
             // 用户名存在，给出提示信息
             response.setContentType("text/html;charset=utf-8");
