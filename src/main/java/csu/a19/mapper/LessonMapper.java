@@ -6,15 +6,6 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 public interface LessonMapper {
     /**
-     * 根据课程和老师查询课程对象
-     * @param classname
-     * @param teacher
-     * @return
-     */
-    @Select("select * from tb_classes where classname = #{classname} and teacher = #{teacher}")
-    Lesson select(@Param("classname") String classname, @Param("teacher") String teacher);
-
-    /**
      * 根据课程查询课程对象
      * @param classname
      * @return
@@ -30,6 +21,6 @@ public interface LessonMapper {
     @Select("select * from tb_classes where teacher = #{teacher}")
     Lesson selectByTeacher(String teacher);
 
-    @Insert("insert into tb_classes values(null,#{classname},#{teacher})")
+    @Insert("insert into tb_classes values(null,#{classname},#{teacher},#{CRY},#{pictures},#{date_and_time})")
     void add(Lesson lesson);
 }
