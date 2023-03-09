@@ -40,6 +40,9 @@ public class Lesson {
                 "id=" + id +
                 ", classname='" + classname + '\'' +
                 ", teacher='" + teacher + '\'' +
+                ", CRY='" + CRY + '\'' +
+                ", pictures='" + pictures + '\'' +
+                ", date_and_time='" + date_and_time + '\'' +
                 '}';
     }
 
