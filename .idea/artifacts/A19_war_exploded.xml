@@ -14,7 +14,6 @@
           <element id="module-output" name="A19" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.11.0" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.9" />
