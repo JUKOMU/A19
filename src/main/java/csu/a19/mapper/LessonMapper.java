@@ -10,7 +10,7 @@ public interface LessonMapper {
      * @param classname
      * @return
      */
-    @Select("select * from tb_classes where classname = #{classname}")
+    @Select("select * from tb_lesson where classname = #{classname}")
     Lesson selectByClassname(String classname);
 
     /**
@@ -18,9 +18,9 @@ public interface LessonMapper {
      * @param teacher
      * @return
      */
-    @Select("select * from tb_classes where teacher = #{teacher}")
+    @Select("select * from tb_lesson where teacher = #{teacher}")
     Lesson selectByTeacher(String teacher);
 
-    @Insert("insert into tb_classes values(null,#{classname},#{teacher},#{CRY},#{pictures},#{date_and_time})")
+    @Insert("insert into tb_lesson values(null,#{classname},#{teacher},#{CRY},#{pictures},#{date_and_time})")
     void add(Lesson lesson);
 }
