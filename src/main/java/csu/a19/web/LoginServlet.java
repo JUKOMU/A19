@@ -35,7 +35,9 @@ public class LoginServlet extends HttpServlet {
         // 判断user释放为null
         if(user != null){
             // 登陆成功
-            response.sendRedirect("index.html");
+            HttpSession session = request.getSession();
+            session.setAttribute("user",user);
+            response.sendRedirect("index.jsp");
         }else {
             // 登陆失败
         }
