@@ -6,7 +6,10 @@ public class Lesson {
     private String teacher;
     private String CRY; // "CRY" 是 "content" 的缩写
     private String pictures;
-    private String date_and_time;
+    private String week;
+    private String date;
+    private String classes; // 第几节
+    private String place;
 
     public Integer getId() { return id; }
 
@@ -28,9 +31,18 @@ public class Lesson {
 
     public void setPictures(String pictures) { this.pictures = pictures; }
 
-    public String getDate_and_time() { return date_and_time; }
+    public String getWeek() { return week; }
 
-    public void setDate_and_time(String date_and_time) { this.date_and_time = date_and_time; }
+    public void setWeek(String week) { this.week = week; }
+
+    public String getDate() { return date;}
+    public void setDate(String date) { this.date = date;}
+
+    public String getClasses() { return classes;}
+    public void setClasses(String classes) {this.classes = classes;}
+
+    public String getPlace() { return place;}
+    public void setPlace(String place) { this.place = place;}
 
 
 
@@ -42,7 +54,10 @@ public class Lesson {
                 ", teacher='" + teacher + '\'' +
                 ", CRY='" + CRY + '\'' +
                 ", pictures='" + pictures + '\'' +
-                ", date_and_time='" + date_and_time + '\'' +
+                ", week='" + week + '\'' +
+                ", date='" + date + '\'' +
+                ", classes='" + classes + '\'' +
+                ", place='" + place + '\'' +
                 '}';
     }
 

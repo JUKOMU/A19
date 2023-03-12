@@ -21,6 +21,6 @@ public interface LessonMapper {
     @Select("select * from tb_lesson where teacher = #{teacher}")
     Lesson selectByTeacher(String teacher);
 
-    @Insert("insert into tb_lesson values(null,#{classname},#{teacher},#{CRY},#{pictures},#{date_and_time})")
+    @Insert("insert into tb_lesson values(null,#{classname},#{teacher},#{CRY},#{pictures},#{week},#{date},#{classes},#{place})")
     void add(Lesson lesson);
 }
