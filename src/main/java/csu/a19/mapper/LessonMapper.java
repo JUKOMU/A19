@@ -23,9 +23,17 @@ public interface LessonMapper {
     @Select("select * from tb_lesson where teacher = #{teacher}")
     Lesson selectByTeacher(String teacher);
 
+    /**
+     * 添加课程
+     * @param lesson
+     */
     @Insert("insert into tb_lesson values(null,#{classname},#{teacher},#{CRY},#{pictures},#{week},#{date},#{classes},#{place})")
     void add(Lesson lesson);
 
+    /**
+     * 修改课程信息
+     * @param likes
+     */
     @Update("update tb_lesson set likes = #{likes} where id = #{id}")
     void updateLikes(Integer likes);
 }
