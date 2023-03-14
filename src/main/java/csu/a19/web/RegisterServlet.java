@@ -48,21 +48,23 @@ public class RegisterServlet extends HttpServlet {
 
             //2.4 调用方法
             User u = userMapper.selectByUsername(username);
-            // 用户名不存在，添加用户
-            userMapper.add(user);
 
-            // 提交事务
-            sqlSession.commit();
-            // 释放资源
-            sqlSession.close();
+
+
 
             //3. 判断用户对象释放为null
             if( u == null){
+                // 用户名不存在，添加用户
+                userMapper.add(user);
                 response.sendRedirect("index.jsp");
             }else {
                 response.setContentType("text/html;charset=utf-8");
                 request.setAttribute("register_msg", "用户已存在");
             }
+            // 提交事务
+            sqlSession.commit();
+            // 释放资源
+            sqlSession.close();
         }
     }
 
