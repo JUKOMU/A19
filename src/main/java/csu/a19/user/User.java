@@ -14,6 +14,16 @@ public class User {
     private String mail;
     private String TEL; // 电话号码
 
+    public User(){
+        head = null;
+        access = "2";
+        age = null;
+        gender = null;
+        mail = null;
+        TEL = null;
+
+    }
+
     public Integer getId() {
         return id;
     }

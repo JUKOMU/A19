@@ -4,6 +4,8 @@ import csu.a19.lesson.Lesson;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+
 public interface LessonMapper {
     /**
      * 根据课程查询课程对象
@@ -23,4 +25,7 @@ public interface LessonMapper {
 
     @Insert("insert into tb_lesson values(null,#{classname},#{teacher},#{CRY},#{pictures},#{week},#{date},#{classes},#{place})")
     void add(Lesson lesson);
+
+    @Update("update tb_lesson set likes = #{likes} where id = #{id}")
+    void updateLikes(Integer likes);
 }

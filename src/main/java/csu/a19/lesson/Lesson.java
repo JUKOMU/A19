@@ -10,6 +10,8 @@ public class Lesson {
     private String date;
     private String classes; // 第几节
     private String place;
+    private Integer likes; // 点赞
+    private String subject;
 
     public Integer getId() { return id; }
 
@@ -44,6 +46,12 @@ public class Lesson {
     public String getPlace() { return place;}
     public void setPlace(String place) { this.place = place;}
 
+    public Integer getLikes() { return likes;}
+    public void setLikes(Integer likes) { this.likes = likes;}
+
+    public String getSubject() { return subject;}
+    public void setSubject(String subject) { this.subject = subject;}
+
 
 
     @Override
@@ -58,6 +66,8 @@ public class Lesson {
                 ", date='" + date + '\'' +
                 ", classes='" + classes + '\'' +
                 ", place='" + place + '\'' +
+                ", likes='" + likes + '\'' +
+                ", subject='" + subject + '\'' +
                 '}';
     }
 

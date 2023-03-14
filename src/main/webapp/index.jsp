@@ -383,7 +383,7 @@
     document.getElementById("user").onclick = function () {
         var user = document.getElementById("uspan").innerText;
         if (user == null || user === ""){
-            document.location.href = '/A19/login.html'
+            document.location.href = '/A19/login.jsp'
         }
     }
 </script>

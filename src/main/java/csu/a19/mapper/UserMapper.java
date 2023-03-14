@@ -80,7 +80,7 @@ public interface UserMapper {
      * @return
      */
     @Update("update tb_user set password = #{password} where id = #{id}")
-    User updatePassword(String password);
+    User updatePassword(Integer id,String password);
 
     /**
      * 修改头像
@@ -88,7 +88,7 @@ public interface UserMapper {
      * @return
      */
     @Update("update tb_user set head = #{head} where id = #{id}")
-    User updateHead(String head);
+    User updateHead(Integer id,String head);
 
     /**
      * 修改权限
@@ -96,7 +96,7 @@ public interface UserMapper {
      * @return
      */
     @Update("update tb_user set access = #{access} where id = #{id}")
-    User updateAccess(String access);
+    User updateAccess(Integer id,String access);
 
     /**
      * 修改年龄
@@ -104,7 +104,7 @@ public interface UserMapper {
      * @return
      */
     @Update("update tb_user set age = #{age} where id = #{id}")
-    User updateAge(String age);
+    User updateAge(Integer id,String age);
 
     /**
      * 修改性别
@@ -112,7 +112,7 @@ public interface UserMapper {
      * @return
      */
     @Update("update tb_user set gender = #{gender} where id = #{id}")
-    User updateGender(String gender);
+    User updateGender(Integer id,String gender);
 
     /**
      * 修改邮箱
@@ -120,7 +120,7 @@ public interface UserMapper {
      * @return
      */
     @Update("update tb_user set mail = #{mail} where id = #{id}")
-    User updateMail(String mail);
+    User updateMail(Integer id,String mail);
 
     /**
      * 修改电话号码
@@ -128,6 +128,6 @@ public interface UserMapper {
      * @return
      */
     @Update("update tb_user set TEL = #{TEL} where id = #{id}")
-    User updateTEL(String TEL);
+    User updateTEL(Integer id,String TEL);
 
 }

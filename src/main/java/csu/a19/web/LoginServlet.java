@@ -40,6 +40,8 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("index.jsp");
         }else {
             // 登陆失败
+            request.setAttribute("login_msg", "用户不存在");
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
         }
     }
 
