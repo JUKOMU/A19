@@ -9,18 +9,28 @@ import org.apache.ibatis.annotations.Update;
 
 public interface UserMapper {
 
+    /**
+     *
+     * 历遍用户数据
+     *
+     */
+    @Select("select * from tb_user")
+    User[] selectAll();
+
 
     /**
      * 根据用户名和密码查询用户对象
+     *
      * @param username
      * @param password
      * @return
      */
     @Select("select * from tb_user where username = #{username} and password = #{password}")
-    User select(@Param("username") String username, @Param("password")  String password);
+    User select(@Param("username") String username, @Param("password") String password);
 
     /**
      * 根据用户名查询用户对象
+     *
      * @param username
      * @return
      */
@@ -29,6 +39,7 @@ public interface UserMapper {
 
     /**
      * 根据权限查询用户对象
+     *
      * @param access
      * @return
      */
@@ -37,6 +48,7 @@ public interface UserMapper {
 
     /**
      * 根据年龄查询用户对象
+     *
      * @param age
      * @return
      */
@@ -45,6 +57,7 @@ public interface UserMapper {
 
     /**
      * 根据性别查询用户对象
+     *
      * @param gender
      * @return
      */
@@ -53,6 +66,7 @@ public interface UserMapper {
 
     /**
      * 根据邮箱查询用户对象
+     *
      * @param mail
      * @return
      */
@@ -61,6 +75,7 @@ public interface UserMapper {
 
     /**
      * 根据电话号码查询用户对象
+     *
      * @param TEL
      * @return
      */
@@ -69,6 +84,7 @@ public interface UserMapper {
 
     /**
      * 添加用户
+     *
      * @param user
      */
     @Insert("insert into tb_user values(null,#{username},#{password},#{head},#{access},#{age},#{gender},#{mail},#{TEL})")
@@ -76,58 +92,66 @@ public interface UserMapper {
 
     /**
      * 修改密码
+     *
      * @param password
      * @return
      */
     @Update("update tb_user set password = #{password} where id = #{id}")
-    User updatePassword(Integer id,String password);
+    User updatePassword(Integer id, String password);
 
     /**
      * 修改头像
+     *
      * @param head
      * @return
      */
     @Update("update tb_user set head = #{head} where id = #{id}")
-    User updateHead(Integer id,String head);
+    User updateHead(Integer id, String head);
 
     /**
      * 修改权限
+     *
      * @param access
      * @return
      */
     @Update("update tb_user set access = #{access} where id = #{id}")
-    User updateAccess(Integer id,String access);
+    User updateAccess(Integer id, String access);
 
     /**
      * 修改年龄
+     *
      * @param age
      * @return
      */
     @Update("update tb_user set age = #{age} where id = #{id}")
-    User updateAge(Integer id,String age);
+    User updateAge(Integer id, String age);
 
     /**
      * 修改性别
+     *
      * @param gender
      * @return
      */
     @Update("update tb_user set gender = #{gender} where id = #{id}")
-    User updateGender(Integer id,String gender);
+    User updateGender(Integer id, String gender);
 
     /**
      * 修改邮箱
+     *
      * @param mail
      * @return
      */
     @Update("update tb_user set mail = #{mail} where id = #{id}")
-    User updateMail(Integer id,String mail);
+    User updateMail(Integer id, String mail);
 
     /**
      * 修改电话号码
+     *
      * @param TEL
      * @return
      */
     @Update("update tb_user set TEL = #{TEL} where id = #{id}")
-    User updateTEL(Integer id,String TEL);
+    User updateTEL(Integer id, String TEL);
 
 }
+

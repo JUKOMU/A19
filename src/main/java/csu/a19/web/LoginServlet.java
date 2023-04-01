@@ -18,6 +18,21 @@ public class LoginServlet extends HttpServlet {
         // 接收用户名和密码
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        // 获取用户输入的验证码
+        String checkCode = request.getParameter("code");
+
+        // 从session获取验证码
+        HttpSession session = request.getSession();
+        String checkCodeGen = (String) session.getAttribute("checkCodeGen");
+
+        // 比较
+        if (!checkCodeGen.equalsIgnoreCase(checkCode)) {
+            System.out.println(checkCode);
+            System.out.println(checkCodeGen);
+            request.setAttribute("login_msg", "验证码错误");
+            request.getRequestDispatcher("/login.jsp").forward(request,response);
+            return;
+        }
 
         //获取SqlSessionFactory对象
         SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtils.getSqlSessionFactory();
@@ -35,12 +50,13 @@ public class LoginServlet extends HttpServlet {
         // 判断user释放为null
         if(user != null){
             // 登陆成功
-            HttpSession session = request.getSession();
+            Cookie cookie = new Cookie("user", user.getUsername());
             session.setAttribute("user",user);
+            response.addCookie(cookie);
             response.sendRedirect("index.jsp");
         }else {
             // 登陆失败
-            request.setAttribute("login_msg", "用户不存在");
+            request.setAttribute("login_msg", "用户名或密码错误");
             request.getRequestDispatcher("/login.jsp").forward(request, response);
         }
     }

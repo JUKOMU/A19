@@ -12,7 +12,6 @@ public class Lesson {
     private String place;
     private Integer likes; // 点赞
     private String subject;
-
     public Integer getId() { return id; }
 
     public void setId(Integer id) { this.id = id; }

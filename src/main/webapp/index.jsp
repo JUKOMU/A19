@@ -8,7 +8,7 @@
     <title>云平台</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./iconfont/iconfont.css">
-    <link rel="stylesheet" href="./iconfont2/iconfont.css">
+    <link rel="stylesheet" href="./iconfont4/iconfont.css">
 </head>
 <body>
 <div class="container">
@@ -27,19 +27,16 @@
             <div class="nav">
                 <ul class="tool">
                     <li>
-                        <a href="file:///C:/Users/YANSIYU/Desktop/Service/course.html#">课程管理</a>
+                        <a href="./course.jsp">课程云</a>
                     </li>
                     <li>
-                        <a href="#">用户管理</a>
+                        <a href="user.jsp">用户云</a>
                     </li>
                     <li>
-                        <a href="#">排课管理</a>
+                        <a href="work.jsp">作业云</a>
                     </li>
                     <li>
-                        <a href="#">作业管理</a>
-                    </li>
-                    <li>
-                        <a href="#">实验管理</a>
+                        <a href="#">实验云</a>
                     </li>
                 </ul>
             </div>
@@ -59,10 +56,8 @@
 
             <!-- 用户 -->
             <div class="user">
-                <a href="#" id="user">
-                    <img src="./images/user.png" alt="">
-                    <span id="uspan">${user.username}</span>
-                </a>
+                <img src="./images/user.png" alt="">
+                <a href="javascript:;"><span class="user-name">${cookie.user.value}</span></a>
             </div>
         </div>
     </div>
@@ -70,8 +65,8 @@
     <!-- 侧边栏 -->
     <div class="sidebar">
         <ul class="sidebar-list">
-            <li class="sidecourse"><div class="iconfont icon-zuoyeguanli"></div><a href="#">课程</a></li>
-            <li><div class="iconfont icon-tuijian"></div><a href="#">推荐</a></li>
+            <li class="sidecourse"><div class="iconfont icon-tongzhi"></div><a href="#">通知</a></li>
+            <li><div class="iconfont icon-tuichudenglu" name= "out"></div><a href="#">退出</a></li>
             <li><div class="iconfont icon-12"></div><a href="#">顶部</a></li>
         </ul>
     </div>
@@ -110,25 +105,25 @@
             </div>
         </div>
         <div class="right">
-            <h2>我的课程表</h2>
+            <h2>我的通知</h2>
             <div class="content">
                 <dl>
-                    <dt>继续学习程序设计语言
-                    <dd>正在学习-使用对象</dd>
+                    <dt>课程时间更改！
+                    <dd>xxxxxxxx</dd>
                     </dt>
                 </dl>
                 <dl>
-                    <dt>继续学习程序设计语言
-                    <dd>正在学习-使用对象</dd>
+                    <dt>课程地点更改！
+                    <dd>xxxxxxxx</dd>
                     </dt>
                 </dl>
                 <dl>
-                    <dt>继续学习程序设计语言
-                    <dd>正在学习-使用对象</dd>
+                    <dt>课程取消！！！
+                    <dd>xxxxxxxx</dd>
                     </dt>
                 </dl>
             </div>
-            <a href="#" class="more">今日课程</a>
+            <a href="#" class="more">今日通知</a>
         </div>
     </div>
 
@@ -149,138 +144,78 @@
         <a href="#" class="xingqu">修改兴趣</a>
     </div>
 
-    <!-- 精品推进课程 -->
-    <div class="box wrapper">
-        <div class="title">
-            <h2>精品推荐</h2>
-            <a href="#">查看全部</a>
+    <!-- 分区图片展示 -->
+    <div class="show wrapper">
+        <div class="show-course">
+            <img src="./images/show2.png" alt="">
+            <div class="words1">
+                <div class="title1">Sonder 课程云</div>
+                <div class="para1">
+                    Sonder团队基于云平台教学管理系统所搭建的二级平台,<br>
+                    新增个性化学习路线，奖励机制提高学生兴趣，保证课程质量。
+                </div>
+                <span class="btn1">
+                        <a href="course.jsp">点击查看</a>
+                    </span>
+            </div>
         </div>
+        <div class="show-user">
+            <img src="./images/show1.png" alt="">
+            <div class="words2">
+                <div class="title2">Sonder 用户云</div>
+                <div class="para2">
+                    Sonder团队为老师,管理员量身定制的管理系统<br>
+                    可以对课程学员，使用用户进行筛选和修改。
+                </div>
+                <span class="btn2">
+                        <a href="user.jsp">点击查看</a>
+                    </span>
+            </div>
+        </div>
+        <div class="show-work"></div>
+        <div class="show-lab"></div>
+    </div>
 
-        <div class="content clearfix">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic.png" alt="">
-                        <!-- 渐变背景的盒子 -->
-                        <!-- mask表示遮罩层 -->
-                        <div class="mask"></div>
-                        <h3>Think PHP 5.0 博客系统实战项目演练</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <!-- 定位的hot小图-->
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic2.png" alt="">
-                        <div class="mask"></div>
-                        <h3>Android网络动态图片加载实战</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic3.png" alt="">
-                        <div class="mask"></div>
-                        <h3>大前端实战商城演练</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic4.png" alt="">
-                        <div class="mask"></div>
-                        <h3>Android实战项目演练</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic7.png" alt="">
-                        <div class="mask"></div>
-                        <h3>Android Hybrid APP开发实战 H5+原生</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic6.png" alt="">
-                        <div class="mask"></div>
-                        <h3>Kami2首页界面切换效果</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic7.png" alt="">
-                        <div class="mask"></div>
-                        <h3>Unity Profiler入门</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic8.png" alt="">
-                        <div class="mask"></div>
-                        <h3>Cocos2d-x 引擎源码中的纹理优化</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic2.png" alt="">
-                        <div class="mask"></div>
-                        <h3>大前端实战商城演练</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/pic3.png" alt="">
-                        <div class="mask"></div>
-                        <h3>Android实战项目演练</h3>
-                        <p><span>高级</span> • 1125人在学习</p>
-                        <img src="./images/hot.png" alt="" class="hot">
-                    </a>
-                </li>
-            </ul>
+    <!-- 热门分类 -->
+    <div class="categories wrapper">
+        <div class="pp-cg">
+            <img src="./images/cg1.png" alt="">
+        </div>
+        <div class="pp-cg">
+            <img src="./images/cg2.png" alt="">
+        </div>
+        <div class="pp-cg">
+            <img src="./images/cg3.png" alt="">
         </div>
     </div>
 
     <!-- 版权 -->
-    <div class="footer">
-        <div class="wrapper">
-            <div class="left">
-                <img src="./images/logo.png" alt="">
-                <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程<br>
-                    @2017年XTCG Inc.保留所有权利。渝ICP备2022002010号</p>
-                <a href="#">下载APP</a>
+    <div class="footer wrapper">
+        <div class="left">
+            <img src="./images/huayunlogo4.png" alt="">
+            <p>华云数据云平台教学管理系统，为每一个爱学习的同学圆高校梦</p>
+        </div>
+        <div class="f-right">
+            <div class="r-1">
+                <div>
+                    <h4><a href="#">关于我们</a></h4>
+                </div>
+                <br>
+                <div>
+                    <a href="" class="f-size">关于我们</a>
+                    <a href="" class="f-size">联系我们</a>
+                    <br>
+                    <a href="" class="f-size">常见问题</a>
+                    <a href="" class="f-size">问题反馈</a>
+                </div>
             </div>
-            <div class="right">
-                <dl>
-                    <dt>合作伙伴</dt>
-                    <dd><a href="#">合作机构</a></dd>
-                    <dd><a href="#">合作导师</a></dd>
-                </dl>
-                <dl>
-                    <dt>合作伙伴</dt>
-                    <dd><a href="#">合作机构</a></dd>
-                    <dd><a href="#">合作导师</a></dd>
-                </dl>
-                <dl>
-                    <dt>合作伙伴</dt>
-                    <dd><a href="#">合作机构</a></dd>
-                    <dd><a href="#">合作导师</a></dd>
-                </dl>
+            <div class="r-2">
+                <h4><a href="#">关注我们</a></h4>
             </div>
+            <div class="r-3">
+                <h4><a href="#">友情链接</a></h4>
+            </div>
+
         </div>
     </div>
 </div>
@@ -290,7 +225,10 @@
     /* 轮播图 */
     const sliderData = [
         { url: './images/banner1.jpg' },
-        { url: './images/banner2.png'},
+        { url: './images/banner2.png' },
+        { url: './images/banner3.png' },
+        { url: './images/banner4.png' },
+        { url: './images/banner5.png' },
     ]
     const img = document.querySelector('.banner .wrapper .pic img')
     /* 两个按钮 */
@@ -357,7 +295,7 @@
         }
     })
 
-    /* 侧边栏课程隐藏效果 */
+    /* 侧边栏通知隐藏效果 */
     const course = document.querySelector('.sidecourse')
     const right = document.querySelector('.banner .right')
     course.addEventListener('mouseenter', function () {
@@ -380,12 +318,24 @@
             header.classList.remove('fixed')
         }
     })
-    document.getElementById("user").onclick = function () {
-        var user = document.getElementById("uspan").innerText;
-        if (user == null || user === ""){
-            document.location.href = '/A19/login.jsp'
+
+    /* 渲染用户名 */
+    const userName = document.querySelector('.user-name')
+    function render() {
+        const uname = '${cookie.user.value}';
+        console.log('${cookie.user.value}')
+        if (!uname) {
+            userName.innerHTML = '<a href="./login.jsp">登录</a>'
         }
     }
+    render()
+
+    /* 退出登录 */
+    const out = document.querySelector('[name=out]')
+    out.addEventListener('click', function () {
+        document.cookie = "user=0;expires=" + new Date().toUTCString();
+        location.reload(true)
+    })
 </script>
 </body>
 </html>

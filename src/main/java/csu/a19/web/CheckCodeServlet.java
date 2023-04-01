@@ -22,8 +22,6 @@ public class CheckCodeServlet extends HttpServlet {
         // 存入Session
         HttpSession session = request.getSession();
         session.setAttribute("checkCodeGen",checkCode);
-
-
     }
 
     @Override
