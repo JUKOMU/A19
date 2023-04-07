@@ -10,6 +10,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 @WebServlet(name = "ManageServlet", value = "/manageServlet")
@@ -21,18 +22,10 @@ public class ManageServlet extends HttpServlet {
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         User[] userList = userMapper.selectAll();
         sqlSession.close();
-
-//        request.setAttribute("ele", userList);
-        System.out.println("0");
-        List<User> l = null;
-        for (User user : userList) {
-            System.out.println(user);
-            l = null;
-            l.add(user);
-        }
-        System.out.println(userList);
-        request.setAttribute("ele", "123");
+        System.out.println(Arrays.toString(userList));
+        request.setAttribute("userlist", Arrays.toString(userList));
         request.getRequestDispatcher("/user.jsp").forward(request, response);
+        System.out.println("ok");
     }
 
     @Override

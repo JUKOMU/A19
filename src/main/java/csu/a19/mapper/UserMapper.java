@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
+import java.util.List;
+
 
 public interface UserMapper {
 
@@ -152,6 +154,9 @@ public interface UserMapper {
      */
     @Update("update tb_user set TEL = #{TEL} where id = #{id}")
     User updateTEL(Integer id, String TEL);
+
+    @Select("select from tb_user where id = #{id}")
+    List<User> queryUser(Integer id);
 
 }
 
