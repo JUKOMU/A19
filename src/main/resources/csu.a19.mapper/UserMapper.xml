@@ -6,4 +6,7 @@
 <resultMap id="UserMapper" type="result">
     <result column=""
 </resultMap>
+
+
+
 </mapper>
