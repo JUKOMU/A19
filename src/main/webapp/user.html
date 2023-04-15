@@ -1,9 +1,3 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
-<%
-    import csu.a19.mapper.UserMapper;
-    import csu.a19.user.User;
-
-%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,49 +19,41 @@
         <!--头部header:负责头部区域的样式， wrapper只负责版心效果 -->
         <div class="header fixed">
             <div class="header-wrapper">
-                <h1>
-                    <a href="./index.jsp"><img src="./images/huayunlogo4.png" alt=""></a>
+                <h1 class="header-h1">
+                    <a href="#"><img src="./images/sonder.png" alt=""></a>
                 </h1>
-
+        
                 <!-- 导航 -->
                 <div class="nav">
                     <ul class="tool">
                         <li>
-                            <a href="course.jsp">课程云</a>
+                            <a href="./course.html">课程云</a>
                         </li>
                         <li>
-                            <a href="./user.jsp">用户云</a>
-                        </li>
-                        <li>
-                            <a href="work.jsp">作业云</a>
+                            <a href="./work.html">作业云</a>
                         </li>
                         <li>
                             <a href="#">实验云</a>
                         </li>
                     </ul>
                 </div>
-
+        
                 <!-- 搜索 -->
                 <div class="search">
                     <input type="text" placeholder="输入关键词">
-                    <ul class="result-list">
-                        <li class="past">历史记录：</li>
-                        <li>清华大学很帅</li>
-                        <li>北京大学厉害</li>
-                        <li>复旦大学呀</li>
-                        <li>中南大学</li>
-                    </ul>
                     <span class="iconfont icon-icon-test1"></span>
                 </div>
-
+        
                 <!-- 用户 -->
                 <div class="user">
-                    <img src="./images/user.png" alt="">
-                    <a href="javascript:;"><span class="user-name">${cookie.user.value}</span></a>
+                    <a href="./self.html">
+                        <img src="./images/user.png" alt="">
+                    </a>
+                    <a href="javascript:;"><span class="user-name">登录</span></a>
                 </div>
             </div>
         </div>
-
+        
         <!-- 添加表单 -->
         <div class="pm-panel wrapper">
             <div class="pm-panel-heading">
@@ -89,7 +75,7 @@
                 <div class="input-group1">
                     <div class="input-group-addon1">性别</div>
                     <input type="text" class="urgen" id="exampleInputAmount" placeholder="请输入性别">
-                </div>
+                </div> 
                 <div class="input-group1">
                     <div class="input-group-addon1">电话</div>
                     <input type="text" class="urpho" id="exampleInputAmount" placeholder="请输入电话">
@@ -110,24 +96,13 @@
                     <th>电话</th>
                     <th>操作</th>
                 </tr>
-
-                <tr class="table1-tr">
-                    <th>${user.id}</th>
-                    <th>${user.username}</th>
-                    <th>${user.mail}</th>
-                    <th>${user.age}</th>
-                    <th>${user.gender}</th>
-                    <th>${user.TEL}</th>
-                    <th>${user.id}</th>
-                </tr>
-
             </thead>
             <tbody>
-
+                
             </tbody>
         </table>
     </div>
-
+    
     <!-- 侧边栏 -->
     <div class="sidebar">
         <ul class="sidebar-list">
@@ -238,9 +213,9 @@
         /* 渲染用户名 */
         const userName = document.querySelector('.user-name')
         function render() {
-            const uname = '${cookie.user.value}'
+            const uname = localStorage.getItem('hy-uname')
             if (!uname) {
-                userName.innerHTML = '<a href="./login.jsp">登录</a>'
+                userName.innerHTML = '<a href="./load.html">登录</a>'
             }else {
                 userName.innerHTML = `<a href="javascript:;">${uname}</a>`
             }
@@ -262,10 +237,9 @@
         /* 退出登录 */
         const out = document.querySelector('[name=out]')
         out.addEventListener('click', function () {
-            document.cookie = "user=0;expires=" + new Date().toUTCString();
-            location.reload(true)
+            localStorage.removeItem('hy-uname')
+            render()
         })
-
     </script>
 </body>
 </html>

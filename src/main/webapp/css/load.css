@@ -120,16 +120,6 @@
     height: 50px;
     margin-top: 10px;
 }
-.right-btn-a {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    text-decoration: none;
-    color: #8f9296f5;
-    height: 50px;
-    width: 250px;
-}
 
 h1 {
     display: block;
@@ -168,14 +158,7 @@ input {
 .right-pic {
     width: 80px;
     height: 40px;
-}
-#checkCodeImg {
-    width: 80px;
-    height: 40px;
-}
-#changeImg {
-    width: 80px;
-    height: 40px;
+    background-color: #016bb9;
 }
 
 .right-code input {
@@ -216,7 +199,7 @@ button {
     justify-content: space-between;
 }
 
-.right-link a {
+a {
     display: block;
     margin-top: 10px;
     width: 110px;

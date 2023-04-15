@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>云平台</title>
+    <title>课程讨论</title>
     <link rel="stylesheet" href="./css/discuss.css">
     <link rel="stylesheet" href="./iconfont/iconfont.css">
-    <link rel="stylesheet" href="./iconfont5/iconfont.css">
+    <link rel="stylesheet" href="./iconfont9/iconfont.css">
 </head>
 <body>
     <div class="container">
@@ -18,21 +18,18 @@
         <!--头部header:负责头部区域的样式， wrapper只负责版心效果 -->
         <div class="header fixed">
             <div class="header-wrapper">
-                <h1>
-                    <a href="./index.jsp"><img src="./images/huayunlogo4.png" alt=""></a>
+                <h1 class="header-h1">
+                    <a href="./index.html"><img src="./images/sonder.png" alt=""></a>
                 </h1>
         
                 <!-- 导航 -->
                 <div class="nav">
                     <ul class="tool">
                         <li>
-                            <a href="course.jsp">课程云</a>
+                            <a href="./course.html">课程云</a>
                         </li>
                         <li>
-                            <a href="user.jsp">用户云</a>
-                        </li>
-                        <li>
-                            <a href="work.jsp">作业云</a>
+                            <a href="./work.html">作业云</a>
                         </li>
                         <li>
                             <a href="#">实验云</a>
@@ -43,19 +40,14 @@
                 <!-- 搜索 -->
                 <div class="search">
                     <input type="text" placeholder="输入关键词">
-                    <ul class="result-list">
-                        <li class="past">历史记录：</li>
-                        <li>清华大学很帅</li>
-                        <li>北京大学厉害</li>
-                        <li>复旦大学呀</li>
-                        <li>中南大学</li>
-                    </ul>
                     <span class="iconfont icon-icon-test1"></span>
                 </div>
         
                 <!-- 用户 -->
                 <div class="user">
-                    <img src="./images/user.png" alt="">
+                    <a href="./self.html">
+                        <img src="./images/user.png" alt="">
+                    </a>
                     <a href="javascript:;"><span class="user-name">登录</span></a>
                 </div>
             </div>
@@ -94,16 +86,26 @@
         </div>
 
         <!-- 标签栏 -->
-        <div class="marks">
-            <div class="flex-l">
+        <div class="flex-l">
+            <div class="flex-pic">
+                <img src="./images/land2.png" alt="">
+            </div>
+            <div class="flex-2">
+                <div class="classtitle">课程云</div>
+                <div class="classfront">
+                    <a href="./course.html">
+                        <span class="iconfont icon-zonghegailan"></span>
+                        <div>概览</div>
+                    </a>
+                </div>
                 <div class="classtable">
-                    <a href="./schedule.html">
+                    <a href="#">
                         <span class="iconfont icon-kebiao"></span>
-                        <div>我的课表</div>
+                        <div>教学课表</div>
                     </a>
                 </div>
                 <div class="selfclass">
-                    <a href="./choose.html">
+                    <a href="#">
                         <span class="iconfont icon-gexinghuayonghu"></span>
                         <div>个性化选课</div>
                     </a>
@@ -113,44 +115,45 @@
                     <div>课程筛选</div>
                 </div>
                 <div class="classdiscuss">
-                    <span class="iconfont icon-taolunqu"></span>
-                    <div>课程讨论</div>
+                    <a href="#">
+                        <span class="iconfont icon-taolunqu"></span>
+                        <div>课程讨论</div>
+                    </a>
                 </div>
-                <div class="classdiscuss-1">
-                    <div>></div>
-                    <div>线性代数</div>
+                <div class="classdata">
+                    <a href="#">
+                        <span class="iconfont icon-shujufenxi"></span>
+                        <div>课程数据</div>
+                    </a>
                 </div>
-                <div class="classdiscuss-2">
-                    <div>></div>
-                    <div>大学物理</div>
-                </div>
-                <div class="classdiscuss-3">
-                    <div>></div>
-                    <div>大学英语</div>
+                <div class="classsign">
+                    <a href="#">
+                        <span class="iconfont icon-qiandao"></span>
+                        <div>签到</div>
+                    </a>
                 </div>
             </div>
         </div>
+        <div id="disqus_thread" data-disqus-identifier="siyuyanyan"></div> 
     </div>
 
     <script>
-        /* 搜索栏文字输入和历史记录 */
-        const input = document.querySelector('[type=text]')
-        const searchul = document.querySelector('.result-list')
-        input.addEventListener('focus', function () {
-            searchul.style.display = 'block'
-        })
-        input.addEventListener('blur', function () {
-            searchul.style.display = 'none'
-        })
+        /* 评论区 */
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
 
-        input.addEventListener('keyup', function (e) {
-            if (e.key === 'Enter') {
-                if (input.value.trim()) {
-                    console.log(input.value.trim());
-                }
-            input.value = ''
-            }
-        })
+        var disqus_config = function () {
+        this.page.url = "http://119.91.207.210:8080/A19/";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "siyuyanyan"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://http-119-91-207-210-8080-a19.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })(); 
 
         /* 侧边栏通知隐藏效果 */
         const course = document.querySelector('.sidecourse')
@@ -195,5 +198,6 @@
             render()
         })
     </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
     

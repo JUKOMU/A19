@@ -16,6 +16,7 @@ li {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 .clearfix:before,.clearfix:after {
@@ -49,6 +50,7 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: center;
+    box-shadow: inset 0 -1px 0 0 #e7eaef;
 }
 
 .header .header-wrapper {
@@ -59,6 +61,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: inset 0 -1px 0 0 #e7eaef;
 }
 
 .fixed {
@@ -69,6 +72,7 @@ body {
 }
 /* 导航 */
 .nav {
+    width: 270px;
     margin-left: 40px;
     height: 42px;
 }
@@ -82,7 +86,7 @@ body {
     padding: 0 5px;
     height: 42px;
     line-height: 42px;
-    font-size: 18px;
+    font-size: 20px;
     color: #050505;
 }
 
@@ -92,6 +96,7 @@ body {
 
 .nav .tool {
     display: flex;
+    justify-content: space-between;
 }
 
 /* 搜索 */
@@ -275,6 +280,7 @@ body {
 
 .flex-l {
     position: absolute;
+    left: 80px;
     top: 100px;
     width: 220px;
     height: 600px;
@@ -285,11 +291,26 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: #fff;
+    color: #000;
+    background-color: #ffffffb0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.flex-pic {
+    width: 150px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #efefef;
 }
 
 
-.classtable a {
+.flex-pic img{
+    width: 111.4px;
+    height: 54.2px;
+}
+
+.classtable a{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -297,11 +318,14 @@ body {
     height: 44px;
     font-size: 18px;
     font-weight: 500;
-    border-bottom: 1px solid #e5e5e5;
-    color: #fff;
+    color: #000;
+} 
+
+.classtable a:hover {
+    background-color: #efefef;
 }
 
-.selfclass {
+.selfclass a {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -309,13 +333,12 @@ body {
     height: 44px;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 10px;
-    border-bottom: 1px solid #e5e5e5;
-    margin-right: 10px;
+    color: #fff;
+    background-color: #016bb9;
 }
 
-.selfclass div {
-    color: #000000;
+.selfclass span {
+    margin-left: 5px;
 }
 
 .classchoose {
@@ -324,11 +347,13 @@ body {
     align-items: center;
     width: 220px;
     height: 44px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    margin-right: 5px;
-    border-bottom: 1px solid #e5e5e5;
-    color: #fff;
+    padding-right: 5px;
+}
+
+.classchoose:hover {
+    background-color: #efefef;
 }
 
 .classdiscuss a {
@@ -339,12 +364,27 @@ body {
     height: 44px;
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
-    border-bottom: 1px solid #e5e5e5;
+    color: #000;
+}
+
+.classdiscuss a:hover {
+    background-color: #efefef;
+}
+
+.class-fold {
+    width: 170px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #efefef;
+    color: #000;
+    border-radius: 5px;
 }
 
 .classdiscuss-1 {
-    width: 220px;
+    width: 150px;
     height: 44px;
     font-size: 16px;
     font-weight: 500;
@@ -354,11 +394,10 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-right: 0;
-    border-bottom: 1px solid #e5e5e5;
 }
 
 .classdiscuss-2 {
-    width: 220px;
+    width: 150px;
     height: 44px;
     font-size: 16px;
     font-weight: 500;
@@ -368,11 +407,10 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-right: 0;
-    border-bottom: 1px solid #e5e5e5;
 }
 
 .classdiscuss-3 {
-    width: 220px;
+    width: 150px;
     height: 44px;
     font-size: 16px;
     font-weight: 500;
@@ -387,8 +425,8 @@ body {
 /* 精品课程  */
 .box {
     position: absolute;
-    top: 100px;
-    margin-left: 290px;
+    top: 130px;
+    margin-left: 320px;
 }
 
 .box .title {
@@ -412,14 +450,14 @@ body {
 }
 
 .box .index-rank {
-    width: 1080px;
+    width: 1050px;
     height: 500px;
     display: flex;
     justify-content: space-between;
 }
 
 .box .index-rank .popular {
-    width: 350px;
+    width: 340px;
     background-color: #fff;
     border-radius: 8px;
 }
@@ -477,7 +515,7 @@ body {
 }
 
 .box .index-rank .new {
-    width: 350px;
+    width: 340px;
     background-color: #fff;
     border-radius: 8px;
 }
@@ -535,7 +573,7 @@ body {
 }
 
 .box .index-rank .star {
-    width: 350px;
+    width: 340px;
     background-color: #fff;
     border-radius: 8px;
 }
