@@ -1,6 +1,6 @@
 ## 项目结构：
 ```html
- src———main/java/csu/a19————lesson————Lesson.java 课程类 
+ src———main/java/sonder/a19————lesson————Lesson.java 课程类 
    |                   |____user————User.java     用户类 
    |                   |____mapper 
    |                   |         |____LessonMapper.java  封装对课程的操作方法 
