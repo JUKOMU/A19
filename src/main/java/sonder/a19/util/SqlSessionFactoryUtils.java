@@ -1,4 +1,4 @@
-package csu.a19.util;
+package sonder.a19.util;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;

@@ -1,7 +1,7 @@
-package csu.a19.util;
+package sonder.a19.util;
 
-import csu.a19.mapper.UserMapper;
-import csu.a19.user.User;
+import sonder.a19.mapper.UserMapper;
+import sonder.a19.user.User;
 import org.apache.ibatis.session.*;
 
 public class GetUsers{

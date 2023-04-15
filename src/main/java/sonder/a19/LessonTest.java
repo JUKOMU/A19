@@ -1,10 +1,8 @@
-package csu.a19;
+package sonder.a19;
 
-import csu.a19.lesson.Lesson;
-import csu.a19.mapper.LessonMapper;
-import csu.a19.mapper.UserMapper;
-import csu.a19.user.User;
-import csu.a19.util.SqlSessionFactoryUtils;
+import sonder.a19.lesson.Lesson;
+import sonder.a19.mapper.LessonMapper;
+import sonder.a19.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -12,9 +10,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.rmi.NoSuchObjectException;
-import java.util.Arrays;
 
 @WebServlet(name = "LessonTest", value = "/LessonTest")
 public class LessonTest extends HttpServlet {

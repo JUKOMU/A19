@@ -1,6 +1,6 @@
-package csu.a19.mapper;
+package sonder.a19.mapper;
 
-import csu.a19.user.User;
+import sonder.a19.user.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

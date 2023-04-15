@@ -1,8 +1,8 @@
-package csu.a19.web;
+package sonder.a19.web;
 
-import csu.a19.mapper.UserMapper;
-import csu.a19.user.User;
-import csu.a19.util.SqlSessionFactoryUtils;
+import sonder.a19.mapper.UserMapper;
+import sonder.a19.user.User;
+import sonder.a19.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 

@@ -1,8 +1,7 @@
-package csu.a19.mapper;
+package sonder.a19.mapper;
 
-import csu.a19.lesson.Lesson;
+import sonder.a19.lesson.Lesson;
 import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 

@@ -6,9 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@page import="csu.a19.user.User" %>
-<%@page import="csu.a19.mapper.UserMapper" %>
-<%@page import="csu.a19.util.GetUsers" %>
+<%@page import="sonder.a19.user.User" %>
+<%@page import="sonder.a19.mapper.UserMapper" %>
+<%@page import="sonder.a19.util.GetUsers" %>
 <%
     User[] userList = GetUsers.getUserList();
 %>

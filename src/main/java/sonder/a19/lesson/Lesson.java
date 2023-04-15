@@ -1,4 +1,4 @@
-package csu.a19.lesson;
+package sonder.a19.lesson;
 
 public class Lesson {
     private Integer id;
