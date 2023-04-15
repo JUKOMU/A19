@@ -1,0 +1,403 @@
+/* index.css是用来美化首页的 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 内减模式 */
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth       ;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table;
+}
+ .clearfix:after {
+    clear: both;
+ }
+
+body {
+    background-color: #fff;
+}
+
+.container {
+    position: relative;
+}
+
+/* 版心 */
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部 */
+.header {
+    width: 100%;
+    height: 80px;
+    margin: 0, auto;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0 -1px 0 0 #e7eaef;
+}
+
+.header .header-wrapper {
+    width: 1200px;
+    height: 80px;
+    margin: 0, auto;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 -1px 0 0 #e7eaef;
+}
+
+.header-h1 img {
+    width: 214px;
+    height: 56px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+/* 导航 */
+.nav {
+    width: 270px;
+    margin-left: 40px;
+    height: 42px;
+}
+
+.nav .tool li {
+    margin-right: 10px;
+}
+
+.nav .tool li a {
+    display: block;
+    padding: 0 5px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 20px;
+    color: #050505;
+}
+
+.nav .tool li a:hover {
+    color: #016bb9;
+}
+
+.nav .tool {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 搜索 */
+.search {
+    width: 230px;
+    height: 40px;
+    position: relative;
+    border: 1px solid #016bb9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 18px;
+}
+
+.search input {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    padding-left: 20px;
+    width: 170px;
+    height: 33px;
+    border: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.search input:focus {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.search .iconfont {
+    position: absolute;
+    left: 185px;
+    line-height: 40px;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+/*控制placeholder的样式*/
+.search input::placeholder {
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+.search button {
+    font-size: 14px;
+}
+
+.search .result-list {
+    display: none;
+    width: 170px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    position: absolute;
+    top: 38px;
+    left: 10px;
+    z-index: 5;
+    border-radius: 5px;
+    border: 1px solid #016bb9;
+    
+}
+
+.past {
+    color: #016bb9;
+}
+
+/* 用户 */
+.user {
+    margin-right: 10px;
+    height: 42px;
+    width: 150px;
+    line-height: 42px;
+}
+
+.user img {
+    /*调节图片竖直对齐方式*/
+    vertical-align: middle;
+}
+
+/* 侧边栏 */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1400px;
+    z-index: 10;
+}
+
+.sidebar .sidebar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 180px;
+    width: 40px;
+    background-color: #fff;
+    font-size: 16px;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .sidebar-list li {
+    border-bottom: 2px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .sidebar-list li:hover {
+    color: #016bb9;
+}
+
+/* 通知栏 */
+
+.right {
+    margin-top: 50px;
+    width: 228px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    z-index: 20;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1150px;
+    display: none;
+    opacity: 0;
+}
+
+.right h2 {
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #4e4e4e;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.right .content {
+    padding: 0 18px;
+}
+
+.right .content dl {
+    padding: 12px 0;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.right .content dt {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+.right .content dd {
+    font-size: 12px;
+    color: #4e4e4e;
+}
+
+.right .more {
+    display: block;
+    margin: 12px auto 0;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    background-color: #016bb9;
+    border-radius: 18px;
+}
+
+/* 个人信息页面 */
+.t-info {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 200px;
+}
+
+.info {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info1 {
+    height: 96px;
+    width: 280px;
+    display: flex;
+    justify-content: left;
+}
+
+.users-text {
+    margin-left: 20px;
+}
+
+.users-name a {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.users-id {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.users-fan {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.info2 {
+    font-size: 24px;
+    width: 450px;
+    height: 36px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.info2-1 {
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info2-2 {
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.info2-3 {
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.info3 {
+    width: 115px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+}
+
+.info4 a {
+    width: 115px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    margin-right: 40px;
+    color: #fff;
+}
+
+.b-info img {
+    position: absolute;
+    left: 150px;
+    top: 300px;
+    width: 200px;
+    height: 427.5px;
+}
+
+.bit {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 540px;
+    height: 53.6px;
+    color: #545c63;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bib  {
+    position: absolute;
+    top: 350px;
+    left: 450px;
+    width: 900px;
+    border-top: 2px solid #545c63;
+}
+
